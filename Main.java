@@ -24,13 +24,15 @@ class Main {
 
   static void playGame(int theRandomNum, int theUserNum){
     Scanner s2 = new Scanner(System.in);
+    
     int numTries = 0;
     int userGuess;
 
     System.out.println("Please guess a number between 0 and " + theUserNum); userGuess = s2.nextInt();
     numTries++;
 
-    while (userGuess != theRandomNum) {      
+    while (userGuess != theRandomNum) {
+
       if (userGuess > theRandomNum) {System.out.println("Guess lower!");
       numTries++;}
 
@@ -39,6 +41,6 @@ class Main {
       
       System.out.println("Enter your new guess: "); userGuess = s2.nextInt();}
 
-      System.out.println("Great, you win! It took you " + numTries + " tries.");
+      System.out.println("Great, you win! It took you " + numTries + "tries.");
   }
 }
